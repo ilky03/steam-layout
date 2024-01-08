@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'Motiva Sans'; 
+    src: url('fonts/MotivaSansRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Motiva Sans Bold'; 
+    src: url('fonts/MotivaSansBold.ttf') format('truetype');
+}
+  
+
+$primary-color: #66C0F4;
+$secondary-color: #4B619B;
+ 
+$main-bg-color: #0E141B; 
+$secondary-bg-color: #14344B;
+$tertiary-bg-color: #212B45;
+$highlight-bg-color: #1E2329;
+
+$main-text-color: #F3F3F3;
+$dim-text-color: #76808C;
+
+body {
+    font-family: 'Motiva Sans', sans-serif;
+    background: linear-gradient(to bottom, #040011, #202B3C);
+    height: 300vh;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    border: none;
+}
+
+.nav {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $main-bg-color;
+        height: 58px;
+        &_left-side {
+            display: flex;
+            justify-content: space-between;
+            width: 50vw;
+            margin-left: 17px;
+            a {
+                font-family: 'Motiva Sans Bold';
+                color: $main-text-color;
+                text-transform: uppercase;
+                font-size: 22px;
+            }
+            &_active {
+                color: $primary-color !important; 
+            }
+        }
+        &_right-side {
+            li {
+                padding: 10px 5px;
+            }
+
+            button {
+                background-color: $highlight-bg-color;
+                height: 39px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                color: $main-text-color;
+            }
+
+            &_icon {
+                height: 24px;
+                width: auto;
+            }
+
+            &_profile {
+                img:first-child {
+                    height: 85%;
+                }   
+                span {
+                    color: $dim-text-color;
+                    margin-left: 8px;
+                }
+                * {
+                    margin-right: 8px;
+                }
+            }
+
+            &_sub {
+                color: $dim-text-color;
+                display: flex;
+                align-items: center;
+
+                button {
+                    background-color: $main-bg-color;
+                    color: $dim-text-color; 
+                }
+
+                a {
+                    margin-left: 55px;
+                }
+
+                * {
+                    margin-right: 8px;
+                }
+
+                img {
+                    filter: opacity(.5);
+                }
+            }
+
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $tertiary-bg-color;
+        height: 58px;
+        padding: 0 10px;
+        a {
+            color: $main-text-color;
+            padding: 15px 30px;
+            border-radius: 5px;
+            margin: 0 4px;
+            &:hover {
+                background-color: $secondary-color;
+            }
+        }
+
+        &_search {
+            display: flex;
+            align-items: center;
+            
+            input {
+                border-radius: 5px;
+                color: $dim-text-color;
+                background-color: rgba(14,20,27, .2);
+                border: 0;
+                padding: 15px 20px;
+                &::placeholder {
+                    color: $secondary-color;
+                }
+                width: 20vw;
+            }
+
+            img {
+                margin-left: -30px;
+            }
+        }
+
+        button {
+            background-color: rgba(118, 128, 140, .1);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            margin-left: 10px;
+        }
+    }
+}
+
+.header {
+    &__bg {
+        width: 100%;
+        height: auto;
+    }
+}
