@@ -13,6 +13,7 @@ $primary-color: #66C0F4;
 $secondary-color: #4B619B;
  
 $main-bg-color: #0E141B; 
+$main-bg-color-20: rgba(14,20,27, .2);
 $secondary-bg-color: #14344B;
 $tertiary-bg-color: #212B45;
 $highlight-bg-color: #1E2329;
@@ -35,6 +36,12 @@ button {
     border: none;
 }
 
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
 .nav {
     ul {
         display: flex;
@@ -57,7 +64,7 @@ button {
                 font-family: 'Motiva Sans Bold';
                 color: $main-text-color;
                 text-transform: uppercase;
-                font-size: 22px;
+                font-size: 18px;
             }
             &_active {
                 color: $primary-color !important; 
@@ -144,7 +151,7 @@ button {
             input {
                 border-radius: 5px;
                 color: $dim-text-color;
-                background-color: rgba(14,20,27, .2);
+                background-color: $main-bg-color-20;
                 border: 0;
                 padding: 15px 20px;
                 &::placeholder {
@@ -173,5 +180,122 @@ button {
     &__bg {
         width: 100%;
         height: auto;
+    }
+}
+
+.container {
+    h2 {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        color: $main-text-color;
+    }
+}
+
+.featured-slider {
+    color: $main-text-color;
+    background-color: $main-bg-color-20;
+    margin: 0 5px;
+    border-radius: 5px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > img {
+        margin: 0 15px;
+    }
+    &__cover {
+        height: 100%;
+        
+    }
+    &__internal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+        column-gap: 17px;
+        width: 1280px;
+        height: 488px;
+        background-color: $main-bg-color;
+        border-radius: 5px;
+        &_collection {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 7px;
+            column-gap: 7px;
+            img {
+                width: 100%; 
+            }
+        }
+        &_right-side {
+            h3 {
+                font-family: 'Motiva Sans Bold';
+                font-size: 26px;
+                margin: 0;
+                margin-top: 5px;
+            }
+
+            p {
+                margin: 17px 0;
+            }
+
+            a {
+                color: $dim-text-color;
+                background-color: $highlight-bg-color;
+                border-radius: 5px;
+                padding: 8px 13px;
+            }
+            > div:not(:last-child) {
+                margin-bottom: 17px;
+            }
+        }
+        &_bottom {
+            p {
+                font-family: 'Motiva Sans Bold';
+                font-size: 18px;
+                margin: 0;
+                margin-right: 13px;
+            }
+            div:last-child {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__btn {
+        &_wish {
+            padding: 12.5px 20px;
+            background-color: $highlight-bg-color;
+            color: $main-text-color;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            img {
+                margin-left: 12px;
+            }
+            border-radius: 5px;
+        }
+
+        &_buy {
+            padding: 12.5px 27.5px;
+            background-color: $secondary-color;
+            color: $main-text-color;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    }
+}
+
+.flex {
+    &__space-between {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.category {
+    &__link {
+        font-size: 12px;
     }
 }
