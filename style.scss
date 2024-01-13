@@ -24,7 +24,6 @@ $dim-text-color: #76808C;
 body {
     font-family: 'Motiva Sans', sans-serif;
     background: linear-gradient(to bottom, #040011, #202B3C);
-    height: 300vh;
 }
 
 ul {
@@ -40,7 +39,13 @@ main {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-top: 90px;
+}
+
+section {
+    margin-bottom: 70px;
 }
 .nav {
     ul {
@@ -183,7 +188,7 @@ main {
     }
 }
 
-.container {
+section:first-child {
     h2 {
         font-size: 18px;
         text-transform: uppercase;
@@ -284,6 +289,25 @@ main {
             font-size: 18px;
         }
     }
+    &__navigation {
+        display: flex;
+        justify-content: center;
+        div {
+            display: flex;
+            border-radius: 5px;
+            margin: 30px 5px 0px 5px;
+            height: 8px;
+            width: 38px;
+            background-color: $main-bg-color;
+        }
+
+        &_active {
+            border-radius: 5px;
+            background-color: $secondary-color; 
+            height: 8px;
+            width: 50%;
+        }
+    }
 }
 
 .flex {
@@ -297,5 +321,51 @@ main {
 .category {
     &__link {
         font-size: 12px;
+    }
+}
+
+.slider {
+    width: 1388px;
+    color: $main-text-color;
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        h2 {
+            font-size: 18px;
+            color: $main-text-color;
+        }
+        a {
+            padding: 7px 20px;
+            box-shadow: 0 0 1.2px $dim-text-color;
+            color: $dim-text-color;
+            border-radius: 5px;
+        }
+    }
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: $main-bg-color-20;
+        border-radius: 5px;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        span {
+            display: flex;
+            border-radius: 5px;
+            margin: 30px 5px 0px 5px;
+            height: 8px;
+            width: 38px;
+            background-color: $main-bg-color;
+        }
+
+        &_active {
+            background-color: $secondary-color !important; 
+        }
     }
 }
